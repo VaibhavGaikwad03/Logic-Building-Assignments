@@ -24,7 +24,6 @@ int count_on_bits(unsigned int num)
 
 int main(void)
 {
-    int pos;
     int result;
     unsigned int num;
 
