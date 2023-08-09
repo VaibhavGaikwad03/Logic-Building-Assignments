@@ -27,8 +27,6 @@ void display_common_on_bits(unsigned int num1, unsigned int num2)
 
 int main(void)
 {
-    int pos;
-    int result;
     unsigned int num1;
     unsigned int num2;
 
