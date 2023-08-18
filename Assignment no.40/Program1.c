@@ -1,5 +1,5 @@
 /*
-Write an application which accept file name form user and open that file in read mode.
+Write an application which accept file name from user and open that file in read mode.
 
 Input : Demo.txt
 Output : File opned successfully.
