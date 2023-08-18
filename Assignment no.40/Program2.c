@@ -1,5 +1,5 @@
 /*
-Write an application which accept file name form user and create that file.
+Write an application which accept file name from user and create that file.
 
 Input : Demo.txt
 Output : File created successfully.
