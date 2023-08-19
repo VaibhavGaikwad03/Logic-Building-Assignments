@@ -35,5 +35,7 @@ int main(void)
 
     write(fd, str, strlen(str));
 
+    close(fd);
+
     return 0;
 }
