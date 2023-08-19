@@ -31,6 +31,7 @@ int main(void)
     
     while (count = read(fd, buffer, sizeof(buffer)))
         write(1, buffer, count);
+    close(fd);
 
     return 0;
 }
