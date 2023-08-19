@@ -32,6 +32,8 @@ int main(void)
     
     while (count = read(fd, buffer, sizeof(buffer)))
         count_bytes += count;
+    
+    close(fd);
 
     printf("File size is %d bytes.\n", count_bytes);
 
