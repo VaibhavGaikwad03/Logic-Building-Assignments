@@ -7,6 +7,7 @@ Output : File created successfully.
 
 #include <stdio.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include <sys/stat.h>
 
 int main(void)
@@ -23,6 +24,8 @@ int main(void)
         perror("ERROR");
     else
         printf("File created successfully.\n");
+
+    close(fd);
 
     return 0;
 }
