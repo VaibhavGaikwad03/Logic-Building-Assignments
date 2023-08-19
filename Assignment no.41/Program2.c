@@ -2,7 +2,7 @@
 Write an application which accept file name from user and count number of small characters from file.
 
 Input : Demo.txt
-Output : Number of capital characters are 57.
+Output : Number of small characters are 57.
 */
 
 #include <stdio.h>
