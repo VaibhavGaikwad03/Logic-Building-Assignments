@@ -7,6 +7,7 @@ Output : File opned successfully.
 
 #include <stdio.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 int main(void)
 {
@@ -22,6 +23,8 @@ int main(void)
         perror("ERROR");
     else
         printf("File opened successfully.\n");
+
+    close(fd);
 
     return 0;
 }
