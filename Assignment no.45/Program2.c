@@ -81,10 +81,10 @@ int main(void)
         break;
     }
 
-    matrix = (int **)malloc(sizeof(int) * row);
+    matrix = (int **)malloc(row * sizeof(int *));
 
     for (i = 0; i < row; i++)
-        matrix[i] = (int *)malloc(sizeof(int) * col);
+        matrix[i] = (int *)malloc(col * sizeof(int));
 
     accept_data(matrix, row, col);
     printf("Enter number : ");
@@ -96,6 +96,15 @@ int main(void)
     result = count_frequency(matrix, row, col, num);
 
     printf("Frequency of %d is %d\n", num, result);
+
+    for (i = 0; i < row; i++)
+    {
+        free(matrix[i]);
+        matrix[i] = NULL;
+    }
+
+    free(matrix);
+    matrix = NULL;
 
     return 0;
 }
