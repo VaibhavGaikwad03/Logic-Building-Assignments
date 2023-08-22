@@ -79,10 +79,10 @@ int main(void)
         break;
     }
 
-    matrix = (int **)malloc(sizeof(int) * row);
+    matrix = (int **)malloc(row * sizeof(int *));
 
     for (i = 0; i < row; i++)
-        matrix[i] = (int *)malloc(sizeof(int) * col);
+        matrix[i] = (int *)malloc(col * sizeof(int));
 
     accept_data(matrix, row, col);
 
@@ -92,6 +92,15 @@ int main(void)
     result = add_diagonal(matrix, row, col);
 
     printf("Addition of diagonal is : %d\n", result);
+
+    for (i = 0; i < row; i++)
+    {
+        free(matrix[i]);
+        matrix[i] = NULL;
+    }
+
+    free(matrix);
+    matrix = NULL;
 
     return 0;
 }
